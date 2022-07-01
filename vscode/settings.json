@@ -1,0 +1,53 @@
+{
+	"telemetry.telemetryLevel": "off",
+	"workbench.colorTheme": "Default Dark+",
+	"workbench.startupEditor": "none",
+	"workbench.sideBar.location": "right",
+	"window.titleBarStyle": "custom",
+	"editor.formatOnSave": true,
+	"editor.fontSize": 14,
+	"editor.minimap.enabled": false,
+	"editor.unicodeHighlight.nonBasicASCII": false,
+	"prettier.jsxSingleQuote": true,
+	"prettier.singleQuote": true,
+	"prettier.trailingComma": "none",
+	"prettier.useTabs": true,
+	"eslint.validate": ["typescript", "typescriptreact"],
+	"[html]": {
+		"editor.tabSize": 2
+	},
+	"[css]": {
+		"editor.suggest.insertMode": "replace",
+		"editor.tabSize": 2
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2
+	},
+	"[javascriptreact]": {
+		"editor.tabSize": 2
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2
+	},
+	"[python]": {
+		"editor.tabSize": 4
+	},
+	"[json]": {
+		"editor.quickSuggestions": {
+			"strings": true
+		},
+		"editor.suggest.insertMode": "replace",
+		"editor.tabSize": 2,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[c]": {
+		"editor.tabSize": 4
+	},
+	"liveServer.settings.donotShowInfoMsg": true
+}
