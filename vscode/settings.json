@@ -13,6 +13,9 @@
 	"prettier.trailingComma": "none",
 	"prettier.useTabs": true,
 	"eslint.validate": ["typescript", "typescriptreact"],
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": true
+	  },
 	"[html]": {
 		"editor.tabSize": 2
 	},
