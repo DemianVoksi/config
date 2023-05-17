@@ -2,7 +2,7 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
+;;(package-initialize)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -11,20 +11,21 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
- '(custom-enabled-themes (quote (wombat)))
+ '(custom-enabled-themes '(wombat))
  '(display-line-numbers t)
  '(display-line-numbers-width nil)
- '(fringe-mode (quote (nil . 0)) nil (fringe))
+ '(fringe-mode '(nil . 0) nil (fringe))
  '(global-hl-line-mode nil)
  '(horizontal-scroll-bar-mode nil)
  '(icomplete-mode t)
  '(inhibit-startup-screen nil)
  '(js-indent-level 2)
  '(package-selected-packages
-   (quote
-    (company auctex add-hooks tide lsp-mode js2-mode rust-mode multiple-cursors cl-lib vscode-dark-plus-theme ample-theme list-packages-ext neotree magit iedit yasnippet-snippets find-file-in-project elpy)))
+   '(company auctex add-hooks tide lsp-mode js2-mode rust-mode multiple-cursors cl-lib vscode-dark-plus-theme ample-theme list-packages-ext neotree magit iedit yasnippet-snippets find-file-in-project elpy))
  '(scroll-bar-mode nil)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(warning-suppress-log-types '((comp)))
+ '(warning-suppress-types '((comp))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -59,7 +60,7 @@
   "Sets the transparency of the frame window. 0=transparent/100=opaque"
   (interactive "nTransparency Value 0 - 100 opaque:")
   (set-frame-parameter (selected-frame) 'alpha value))
-(set-frame-parameter (selected-frame) 'alpha '95)
+(set-frame-parameter (selected-frame) 'alpha '100)
 
 
 ;; Electric pair mode
@@ -71,11 +72,42 @@
 ;; MELPA
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
-;; and `package-pinned-packages`. Most users will not need or want to do this.
-;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-;; (package-initialize)
+(when (not package-archive-contents)
+  (package-refresh-contents))
+(package-initialize)
 (put 'set-goal-column 'disabled nil)
+
+(defvar myPackages
+  '(elpy
+    company
+    auctex
+    add-hooks
+    tide
+    lsp-mode
+    js2-mode
+    rust-mode
+    multiple-cursors
+    cl-lib
+    vscode-dark-plus-theme
+    ample-theme
+    list-packages-ext
+    neotree
+    magit
+    iedit
+    yasnippet-snippets
+    find-file-in-project
+)
+  )
+
+(mapc #'(lambda (package)
+          (unless (package-installed-p package)
+            (package-install package)))
+      myPackages)
+
+;; ELPY
+(elpy-enable)
+(setq python-shell-interpreter "ipython"
+      python-shell-interpreter-args "-i --simple-prompt")
 
 ;; Keybindings
 (global-set-key (kbd "C-c c") 'comment-region)
@@ -111,7 +143,7 @@
 ;; (require 'use-package)
 
 ;; NVM
-(setq exec-path (append exec-path '("~/.nvm/versions/node/v14.17.3/bin")))
+;;(setq exec-path (append exec-path '("~/.nvm/versions/node/v14.17.3/bin")))
 
 ;;js2-mode
 ;; (use-package lsp-mode
