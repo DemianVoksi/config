@@ -1,78 +1,87 @@
-""""" GENERAL STUFF """""
+"""" GENERAL STUFF """"
+
+set nocompatible              " required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+" alternatively, pass a path where Vundle should install plugins
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gosukiwi/vim-atom-dark'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'nvie/vim-flake8'
+Plugin 'jnurmine/Zenburn'
+Plugin 'scrooloose/nerdtree'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 execute pathogen#infect()
 colors zenburn
+"colors atom-dark
 
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
-
 " Enable type file detection. Vim will be able to try to detect the type of file in use.
 filetype on
-
 " Enable plugins and load plugin for the detected file type.
 filetype plugin on
-
 " Load an indent file for the detected file type.
 filetype indent on
-
 " Turn syntax highlighting on.
 syntax on
-
 " Add numbers to each line on the left-hand side.
 set number
-
 " Highlight cursor line underneath the cursor horizontally.
 set cursorline
-
 " Highlight cursor line underneath the cursor vertically.
 "set cursorcolumn
-
 " Set shift width to 4 spaces.
 set shiftwidth=4
-
 " Set tab width to 4 columns.
 set tabstop=4
-
 " Do not let cursor scroll below or above N number of lines when scrolling.
 set scrolloff=10
-
 " Do not wrap lines. Allow long lines to extend as far as the line goes.
 set nowrap
-
 " While searching though a file incrementally highlight matching characters as you type.
 set incsearch
-
 " Ignore capital letters during search.
 set ignorecase
-
 " Override the ignorecase option if searching for capital letters.
 " This will allow you to search specifically for capital letters.
 set smartcase
-
 " Show partial command you type in the last line of the screen.
 set showcmd
-
 " Show the mode you are on the last line.
 set showmode
-
 " Show matching words during a search.
 set showmatch
-
 " Use highlighting when doing a search.
 set hlsearch
-
 " Set the commands to save in history default number is 20.
 set history=1000
-
 " Enable auto completion menu after pressing TAB.
 set wildmenu
-
 " Make wildmenu behave like similar to Bash completion.
 set wildmode=list:longest
-
 " There are certain files that we would never want to edit with Vim.
 " Wildmenu will ignore files with these extensions.
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+" Set status line to show even if only one window is open
+set laststatus=2
+
+" Automatic bracket closing
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap { {}<Left>
 
 """"" JAVASCRIPT """""
 
@@ -82,34 +91,6 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set shiftwidth=2
 
 """"" PYTHON """""
-
-set nocompatible              " required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
-Plugin 'jnurmine/Zenburn'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-
-" add all your plugins here (note older versions of Vundle
-" used Bundle instead of Plugin)
-
-" ...
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
 
 au BufNewFile,BufRead *.py
     \ set tabstop=4
@@ -135,5 +116,6 @@ set encoding=utf-8
 
 let python_highlight_all=1
 syntax on
+
 
 
