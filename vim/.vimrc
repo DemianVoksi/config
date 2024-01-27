@@ -27,6 +27,8 @@ execute pathogen#infect()
 colors zenburn
 "colors atom-dark
 
+" Nerdtree appears on right side of the terminal
+let g:NERDTreeWinPos = "right"
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
 " Enable type file detection. Vim will be able to try to detect the type of file in use.
@@ -78,20 +80,26 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 " Set status line to show even if only one window is open
 set laststatus=2
 
-" Automatic bracket closing
+" Automatic bracket and quotations closing
 inoremap ( ()<Left>
 inoremap [ []<Left>
 inoremap { {}<Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
+inoremap ` ``<Left> 
+
+""""" Key mapping """""
+
+" Delete whole word
+:imap <C-d> <C-[>diwi
 
 """"" JAVASCRIPT """""
-
 au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2
     \ set softtabstop=2
     \ set shiftwidth=2
 
 """"" PYTHON """""
-
 au BufNewFile,BufRead *.py
     \ set tabstop=4
     \ set softtabstop=4
@@ -116,6 +124,5 @@ set encoding=utf-8
 
 let python_highlight_all=1
 syntax on
-
 
 
