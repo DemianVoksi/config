@@ -8,8 +8,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " alternatively, pass a path where Vundle should install plugins
 call vundle#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'gosukiwi/vim-atom-dark'
+" let Vundle manage Vundle, required 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-syntastic/syntastic'
@@ -25,7 +24,6 @@ filetype plugin indent on    " required
 
 execute pathogen#infect()
 colors zenburn
-"colors atom-dark
 
 " Nerdtree appears on right side of the terminal
 let g:NERDTreeWinPos = "right"
