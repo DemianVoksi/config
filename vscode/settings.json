@@ -1,23 +1,13 @@
 {
-	"telemetry.telemetryLevel": "off",
-	"workbench.colorTheme": "Default Dark+",
-	"workbench.startupEditor": "none",
-	"workbench.sideBar.location": "right",
-	"window.titleBarStyle": "custom",
 	"editor.formatOnSave": true,
 	"editor.fontSize": 14,
 	"editor.minimap.enabled": false,
 	"editor.unicodeHighlight.nonBasicASCII": false,
 	"editor.wordWrap": "wordWrapColumn",
 	"editor.wrappingIndent": "same",
-	"editor.wordWrapColumn": 80,
-	"prettier.jsxSingleQuote": true,
-	"prettier.singleQuote": true,
-	"prettier.trailingComma": "es5",
-	"prettier.useTabs": true,
 	"eslint.validate": ["typescript", "typescriptreact"],
 	"editor.codeActionsOnSave": {
-		"source.sortImports": true
+		"source.sortImports": "explicit"
 	},
 	"[html]": {
 		"editor.tabSize": 2,
@@ -57,7 +47,28 @@
 	"[c]": {
 		"editor.tabSize": 4
 	},
-	"liveServer.settings.donotShowInfoMsg": true,
+	"editor.fontLigatures": false,
+	"editor.quickSuggestions": {
+		"strings": "on"
+	},
+	"files.associations": {
+		"*.ejs": "html"
+	},
 	"gitlens.defaultTimeFormat": "HH:mm",
-	"gitlens.defaultDateShortFormat": "D/M/YYYY"
+	"gitlens.defaultDateShortFormat": "D/M/YYYY",
+	"liveServer.settings.donotShowInfoMsg": true,
+	"prettier.jsxSingleQuote": true,
+	"prettier.singleQuote": true,
+	"prettier.trailingComma": "es5",
+	"prettier.useTabs": true,
+	"tailwindCSS.emmetCompletions": true,
+	"tailwindCSS.suggestions": true,
+	"telemetry.telemetryLevel": "off",
+	"window.titleBarStyle": "custom",
+	"workbench.colorTheme": "Default Dark+",
+	"workbench.startupEditor": "none",
+	"workbench.sideBar.location": "right",
+	"workbench.iconTheme": "vscode-icons",
+
+
 }
