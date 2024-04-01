@@ -1,4 +1,7 @@
 {
+	"css.lint.unknownAtRules": "ignore",
+	"css.customData": [".vscode/css_custom_data.json"],
+	"scss.lint.unknownAtRules": "ignore",
 	"editor.formatOnSave": true,
 	"editor.fontSize": 14,
 	"editor.minimap.enabled": false,
@@ -68,7 +71,5 @@
 	"workbench.colorTheme": "Default Dark+",
 	"workbench.startupEditor": "none",
 	"workbench.sideBar.location": "right",
-	"workbench.iconTheme": "vscode-icons",
-
-
+	"workbench.iconTheme": "vscode-icons"
 }
