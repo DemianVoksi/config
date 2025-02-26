@@ -95,15 +95,20 @@
 		}
 	],
 	// "github.copilot.editor.enableAutoCompletions": false,
-	"settings.cycle": [{
-   		"id": "copilot",
+	"settings.cycle": [
+		{
+   			"id": "copilot",
      		"overrideWorkspaceSettings": true,
-     		"values": [{
-       			"github.copilot.inlineSuggest.enable": false
-     		},
-     		{
-       			"github.copilot.inlineSuggest.enable": true
-     		}
-]},
-],
+     		"values": [
+				{
+       				"github.copilot.editor.enableAutoCompletions": false
+     			},
+     			{
+       				"github.copilot.editor.enableAutoCompletions": true
+     			}
+  					]
+		},
+	],
+	"github.copilot.editor.enableAutoCompletions": false,
+	
 }
