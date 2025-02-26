@@ -1,0 +1,38 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+	{
+		"key": "ctrl+[BracketLeft]",
+		"command": "workbench.action.showAllSymbols"
+	},
+	{
+		"key": "ctrl+t",
+		"command": "-workbench.action.showAllSymbols"
+	},
+	{
+		"key": "ctrl+t",
+		"command": "workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	},
+	{
+		"key": "ctrl+`",
+		"command": "-workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	},
+	{
+		"key": "ctrl+shift+q",
+		"command": "quokka.toggle"
+	},
+	{
+		"key": "ctrl+alt+p",
+		"command": "workbench.action.splitEditorRight"
+	},
+	{
+		"key": "ctrl+alt+[BracketLeft]",
+		"command": "workbench.action.splitEditor"
+	},
+	{
+		"key": "ctrl+c",
+		"command": "settings.cycle.copilot",
+		"when": "editorFocus"
+	  }
+]

@@ -50,12 +50,22 @@
 	"[c]": {
 		"editor.tabSize": 4
 	},
+	"[dotenv]": {
+    "github.copilot.enable": false
+  	},
 	"editor.fontLigatures": false,
 	"editor.quickSuggestions": {
 		"strings": "on"
 	},
 	"files.associations": {
-		"*.ejs": "html"
+		"*.ejs": "html",
+		".env*": "dotenv"
+	},
+	"github.copilot.enable": {
+    "*": true,
+    ".env*": false,
+	"dotenv": false,
+	"plaintext": false
 	},
 	"gitlens.defaultTimeFormat": "HH:mm",
 	"gitlens.defaultDateShortFormat": "D/M/YYYY",
@@ -71,5 +81,29 @@
 	"workbench.colorTheme": "Default Dark+",
 	"workbench.startupEditor": "none",
 	"workbench.sideBar.location": "right",
-	"workbench.iconTheme": "vscode-icons"
+	"workbench.iconTheme": "vscode-icons",
+	"vsicons.dontShowNewVersionMessage": true,
+	"pgsql.connections": [
+		{
+			"host": "ep-sweet-bird-a2tr53os-pooler.eu-central-1.aws.neon.tech",
+			"dbname": "neondb",
+			"user": "neondb_owner",
+			"password": "",
+			"emptyPasswordInput": false,
+			"port": "5432",
+			"profileName": "Taskmaster"
+		}
+	],
+	// "github.copilot.editor.enableAutoCompletions": false,
+	"settings.cycle": [{
+   		"id": "copilot",
+     		"overrideWorkspaceSettings": true,
+     		"values": [{
+       			"github.copilot.inlineSuggest.enable": false
+     		},
+     		{
+       			"github.copilot.inlineSuggest.enable": true
+     		}
+]},
+],
 }
